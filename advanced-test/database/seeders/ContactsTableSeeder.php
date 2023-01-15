@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\Models\Contact;
 
 class ContactsTableSeeder extends Seeder
@@ -14,7 +15,7 @@ class ContactsTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
+    /*     $param = [
             'fullname' => '氏家 拓馬',
             'gender' =>1,
             'email' =>'aaa@aaa',
@@ -54,5 +55,8 @@ class ContactsTableSeeder extends Seeder
             'option' => 'これはテスト4です',
         ];
         Contact::create($param);
-    }
+    */
+
+    Contact::factory()->count(31)->create();
+     }
 }
