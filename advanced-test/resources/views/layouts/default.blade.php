@@ -3,7 +3,8 @@
     <title>@yield('title')</title>
   </head>
   <body>
-    <div class="contentcontent')
+    <h1>@yield('title')</h1>
+    <div class="content">
+      @yield('content')
     </div>
   </body>
-</html>

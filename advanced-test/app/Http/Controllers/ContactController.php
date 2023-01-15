@@ -13,10 +13,10 @@ class ContactController extends Controller
     }
 
     //確認ページを表示させる
-    public function confirm(ContactRequest $request)
+    public function confirm(Request $request)
     {
         $items = $request->all();
-        return view('contact.add');
+        return view('contact.confirm',['items'=>$items]);
     }
 
     //add.phpで入力した情報を保存する
@@ -27,5 +27,11 @@ class ContactController extends Controller
         unset($form['_token']);
         $contact->fill($form)->save();
         return redirect('/index');
+    }
+
+    //thanks画面を表示させる
+    public function thanks()
+    {
+        return view('contact.thanks');
     }
 }

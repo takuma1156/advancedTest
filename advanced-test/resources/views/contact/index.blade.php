@@ -48,9 +48,8 @@ input[type="submit"]{
 
 @section('title','add')
 
-
 @section('content')
-  <form action="/index" method="post">
+  <form action="/index/confirm" method="post">
   @csrf
     <div class="inputs">
       <label class="label">お名前<span class="sub">※</span>

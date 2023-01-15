@@ -18,4 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index',[ContactController::class,'index']);
+Route::get('/index',[ContactController::class,'index'])->name('contact.index');
+Route::post('/index/confirm',[ContactController::class,'confirm']);
+Route::post('/index/confirm',[ContactController::class,'create']);
+Route::get('/index/thanks',[ContactController::class,'thanks']);
